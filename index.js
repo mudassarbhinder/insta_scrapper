@@ -70,7 +70,13 @@ const main_funct = async () => {
     //----------------------------------------------------------------------------------------------------------------
     // end of main fucntion
   } catch (err) {
+    try {
+      await browser.close();
+    } catch (e) {}
   } finally {
+    try {
+      await browser.close();
+    } catch (e) {}
   }
 };
 
